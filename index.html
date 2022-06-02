@@ -1,19 +1,63 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Product Landing Page</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Landing Page</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Lora:400i|Roboto+Condensed:400,700&amp;subset=latin-ext" rel="stylesheet">
-        
-        <link href='./style.css' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400i|Roboto+Condensed:400,700&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
 
-        <script defer src="app.js" charset="utf-8"></script>
-        <script defer src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-    </head>
+    <link href="./style.css" rel="stylesheet" />
 
-    <body>
-        
-    </body>
+    <script defer src="app.js" charset="utf-8"></script>
+    <script
+      defer
+      src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+    ></script>
+  </head>
+
+  <body>
+    <main>
+      <header id="header">
+        <img
+          id="header-img"
+          src="https://upload.wikimedia.org/wikipedia/commons/9/94/GeForce_Now_logo.svg"
+        />
+        <nav id="nav-bar">
+          <ul>
+            <li><a href="" class="nav-link">membership</a></li>
+            <li><a href="" class="nav-link">download</a></li>
+            <li><a href="" class="nav-link">games</a></li>
+            <li><a href="" class="nav-link">support</a></li>
+            <li><a href="" class="nav-link">blog</a></li>
+            <li><a href="" class="nav-link">join now</a></li>
+            <li><a href="" class="nav-link">gift cards</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="content">
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+          <input
+            name="email"
+            type="email"
+            id="email"
+            placeholder="example@example.com"
+            required
+          />
+          <input id="submit" type="submit" value="Submit" />
+        </form>
+
+        <iframe
+          id="video"
+          src="https://images.nvidia.com/geforce-now/webassets/overview/gfn-3080-product-video-final.mp4"
+          height="315"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </main>
+  </body>
 </html>
