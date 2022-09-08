@@ -43,6 +43,47 @@ main {
   text-transform: uppercase;
 }
 
+#membership {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
 .content {
   margin-top: 100px;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+
+  border: 1px solid #000;
+  border-radius: 3px;
+  background: rgb(43, 43, 43);
+}
+
+.option .tier {
+  width: 100%;
+  padding: 15px 0;
+  font-weight: 700;
+}
+
+.option h2 {
+  margin-top: 15px;
+}
+
+#Free .tier {
+  background: rgb(26, 26, 26);
+}
+#Priority .tier {
+  background: #76b900;
+}
+#RTX .tier {
+  background-image: url("src/gfn-tier-bg-3080.png");
+
+  background-size: cover;
 }
