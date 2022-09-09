@@ -45,6 +45,7 @@ main {
 
 #membership {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 60px;
 }
@@ -56,6 +57,7 @@ main {
 .option {
   display: flex;
   flex-direction: column;
+
   align-items: center;
   text-align: center;
   width: calc(100% / 3);
@@ -76,6 +78,19 @@ main {
   margin-top: 15px;
 }
 
+.option ul {
+  margin: 30px;
+}
+
+#Priority li,
+#RTX li {
+  list-style-image: url(src/icon-check-premium.svg);
+}
+
+#Free li {
+  list-style-image: url(src/icon-check-free.svg);
+}
+
 #Free .tier {
   background: rgb(26, 26, 26);
 }
@@ -83,7 +98,7 @@ main {
   background: #76b900;
 }
 #RTX .tier {
-  background-image: url("src/gfn-tier-bg-3080.png");
+  background-image: url(src/gfn-tier-bg-3080.png);
 
   background-size: cover;
 }
