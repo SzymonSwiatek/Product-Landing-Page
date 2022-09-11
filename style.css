@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "myfont";
-  src: url("src/geforce_bold-webfont.woff") format("woff");
+  src: url(src/geforce_bold-webfont.woff) format("woff");
 }
 
 html,
@@ -23,11 +23,17 @@ main {
   color: white;
 }
 
+video {
+  cursor: pointer;
+}
+
 #header {
   display: flex;
   align-items: center;
   justify-content: space-around;
   position: fixed;
+  background: #000;
+  z-index: 2;
 }
 
 #header-img {
@@ -38,20 +44,32 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 30vw;
+  width: 50vw;
   list-style-type: none;
   text-transform: uppercase;
 }
 
+a {
+  color: #999;
+  padding: 15px;
+  text-decoration: none;
+}
+a:hover {
+  color: #76b900;
+}
+
 #membership {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+
   justify-content: center;
   margin-top: 60px;
+  text-align: center;
 }
 
 .content {
   margin-top: 100px;
+  width: 100%;
 }
 
 .option {
@@ -60,7 +78,7 @@ main {
 
   align-items: center;
   text-align: center;
-  width: calc(100% / 3);
+  width: calc(90% / 3);
   margin: 10px;
 
   border: 1px solid #000;
@@ -80,6 +98,55 @@ main {
 
 .option ul {
   margin: 30px;
+  height: 100px;
+}
+
+.option button,
+#submit {
+  background: rgb(118, 185, 0);
+  color: white;
+  border-color: rgb(118, 185, 0);
+  border-style: solid;
+  border-width: 3px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 12px 8px;
+  outline: none;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  min-width: 230px;
+}
+
+.option button:hover,
+#submit:hover {
+  border-color: rgb(106, 167, 0);
+  background: rgb(106, 167, 0);
+}
+
+#Free button {
+  background: rgb(43, 43, 43);
+  color: rgb(118, 185, 0);
+  border-color: rgb(118, 185, 0);
+  border-style: solid;
+  border-width: 3px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 12px 8px;
+  outline: none;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  min-width: 230px;
+}
+
+#Free button:hover {
+  border-color: rgb(106, 167, 0);
+  background: rgb(34, 49, 34);
 }
 
 #Priority li,
@@ -99,6 +166,105 @@ main {
 }
 #RTX .tier {
   background-image: url(src/gfn-tier-bg-3080.png);
-
   background-size: cover;
+}
+
+#fortnite {
+  background-image: url(src/gfn-fornite-global-launch-xl-2560-d@2x.jpg);
+}
+
+#platform {
+  background-image: url(src/geforce-now-platform-2560x580-d.jpg);
+}
+
+#devices {
+  background-image: url(src/geforce-now-devices-2560x770-d@2x.jpg);
+}
+
+.banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.smallbanner {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 100%;
+
+  align-items: center;
+  justify-content: center;
+}
+
+#games1 {
+  position: relative;
+  width: 8680px;
+  height: 160px;
+  background: transparent url(src/1st-mt.png) left center repeat-x;
+  margin-left: 0px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  animation: slideAppsDesktop 50s linear infinite;
+}
+
+#games2 {
+  position: relative;
+  width: 8680px;
+  height: 160px;
+  background: transparent url(src/2nd-mt.png) center center repeat-x;
+  margin-left: 0px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  animation: slideAppsDesktop 60s linear infinite;
+}
+
+#games3 {
+  position: relative;
+  width: 8680px;
+  height: 160px;
+  background: transparent url(src/3rd-mt.png) right center repeat-x;
+  margin-left: 0px;
+  margin-right: 10px;
+  margin-bottom: 0px;
+  animation: slideAppsDesktop 70s linear infinite;
+}
+
+#games {
+  position: relative;
+  width: 100%;
+  top: 0px;
+  float: left;
+  color: #000;
+  background-color: #fff;
+  padding-bottom: 0px;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+
+#videoframe {
+  background-image: url(src/geforce-now-video-2560-770-d@2x.jpg);
+}
+
+@keyframes slideAppsDesktop {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-2170px, 0, 0);
+  }
+}
+
+.flexicons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-right: 0;
+  padding-left: 0;
 }
