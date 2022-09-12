@@ -25,6 +25,17 @@ main {
 
 video {
   cursor: pointer;
+  margin: 20px 0;
+}
+
+h2 {
+  margin: 20px 0;
+}
+
+input {
+  max-width: 275px;
+  width: 100%;
+  padding: 5px;
 }
 
 #header {
@@ -120,6 +131,10 @@ a:hover {
   min-width: 230px;
 }
 
+#submit {
+  margin: 20px 0;
+}
+
 .option button:hover,
 #submit:hover {
   border-color: rgb(106, 167, 0);
@@ -174,10 +189,10 @@ a:hover {
 }
 
 #fortnite h2 {
-  font-size: 50px;
+  font-size: 40px;
 }
 #fortnite h3 {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 #fortnite h2,
@@ -194,6 +209,10 @@ a:hover {
 
 #devices {
   background-image: url(src/geforce-now-devices-2560x770-d@2x.jpg);
+}
+
+#devices p {
+  width: 90%;
 }
 
 .banner {
@@ -267,6 +286,10 @@ a:hover {
   background-image: url(src/geforce-now-video-2560-770-d@2x.jpg);
 }
 
+#videoframe span {
+  margin: 0 0 20px;
+}
+
 @keyframes slideAppsDesktop {
   0% {
     transform: translate3d(0, 0, 0);
@@ -282,4 +305,10 @@ a:hover {
   flex-wrap: wrap;
   padding-right: 0;
   padding-left: 0;
+  margin: 35px 0;
+}
+
+.deviceicon {
+  width: 100px;
+  margin: 35px 35px;
 }
