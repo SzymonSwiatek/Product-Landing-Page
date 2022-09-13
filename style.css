@@ -129,6 +129,7 @@ a:hover {
   text-align: center;
   text-decoration: none;
   min-width: 230px;
+  margin: 10px 0;
 }
 
 #submit {
@@ -157,6 +158,7 @@ a:hover {
   text-align: center;
   text-decoration: none;
   min-width: 230px;
+  margin: 10px 0;
 }
 
 #Free button:hover {
@@ -317,16 +319,21 @@ a:hover {
 }
 
 .deviceicon {
-  width: 100px;
-  margin: 35px 35px;
+  width: 150px;
+  margin: 20px 20px;
+}
+#Free .switch {
+  visibility: hidden;
 }
 
-.switch {
+.switch,
+#Free .switch {
   display: flex;
   width: 90%;
 }
 
-.switch button {
+.switch button,
+#Free .switch button {
   min-width: 50%;
   margin: 20px 0;
   padding: 2px 1px;
@@ -345,4 +352,49 @@ a:hover {
   background: #76b900;
   border-color: #76b900;
   cursor: default;
+}
+
+.bigger {
+  font-size: 40px;
+}
+
+.info {
+  color: #cccccc;
+  font-size: smaller;
+}
+
+.green {
+  color: #76b900;
+}
+
+.one-month {
+  display: none;
+}
+
+.six-months {
+  display: none;
+}
+
+.price-visible {
+  display: block;
+}
+
+.one-month h3 {
+  visibility: hidden;
+}
+
+/* DESKTOP BREAKPOINT */
+@media only screen and (min-width: 1350px) {
+}
+
+/* LAPTOP BREAKPOINT */
+@media only screen and (min-width: 1024px) and (max-width: 1349px) {
+}
+
+/* TABLET BREAKPOINT */
+@media only screen and (min-width: 640px) and (max-width: 1023px) {
+}
+
+/* MOBILE BREAKPOINT */
+@media only screen and (max-width: 639px) {
 }
