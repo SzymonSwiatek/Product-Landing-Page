@@ -37,6 +37,7 @@ input {
   max-width: 275px;
   width: 100%;
   padding: 5px;
+  margin-top: 10px;
 }
 
 #header {
@@ -409,6 +410,13 @@ a:hover {
     top: 30%;
     left: 5%;
   }
+  .option ul {
+    height: 150px;
+  }
+
+  #platform {
+    background-size: 200%;
+  }
 }
 
 /* MOBILE BREAKPOINT */
@@ -433,7 +441,8 @@ a:hover {
   }
 
   .banner {
-    height: 600px;
+    min-height: 600px;
+    height: auto;
   }
 
   .deviceicon {
@@ -443,7 +452,11 @@ a:hover {
   #nav-bar ul {
     display: flex;
     flex-direction: column;
-
     align-items: center;
+    width: 100%;
+  }
+
+  .option {
+    width: 95%;
   }
 }
