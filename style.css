@@ -26,6 +26,7 @@ main {
 video {
   cursor: pointer;
   margin: 20px 0;
+  width: 95%;
 }
 
 h2 {
@@ -39,9 +40,9 @@ input {
 }
 
 #header {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  display: block;
+  /* align-items: center;
+  justify-content: space-around; */
   position: fixed;
   background: #000;
   z-index: 2;
@@ -55,7 +56,9 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 50vw;
+  align-items: center;
+  justify-content: space-around;
+  /* width: 50vw; */
   list-style-type: none;
   text-transform: uppercase;
 }
@@ -194,8 +197,8 @@ a:hover {
 
 #textfortnite {
   position: absolute;
-  top: 300px;
-  left: 425px;
+  top: 30%;
+  left: 15%;
   text-align: left;
 }
 
@@ -206,19 +209,18 @@ a:hover {
   font-size: 20px;
 }
 
-/* #fortnite h2,
-#fortnite h3 {
-  
-  
-  
-} */
-
 #platform {
   background-image: url(src/geforce-now-platform-2560x580-d.jpg);
 }
 
 #devices {
+  display: flex;
+  flex-direction: column;
   background-image: url(src/geforce-now-devices-2560x770-d@2x.jpg);
+  height: auto;
+  min-height: 800px;
+  align-items: center;
+  justify-content: center;
 }
 
 #devices p {
@@ -383,6 +385,16 @@ a:hover {
   visibility: hidden;
 }
 
+.bold-message {
+  font-size: 22px;
+  font-weight: bold;
+  visibility: hidden;
+}
+
+#RTX .bold-message {
+  visibility: visible;
+}
+
 /* DESKTOP BREAKPOINT */
 @media only screen and (min-width: 1350px) {
 }
@@ -393,8 +405,45 @@ a:hover {
 
 /* TABLET BREAKPOINT */
 @media only screen and (min-width: 640px) and (max-width: 1023px) {
+  #textfortnite {
+    top: 30%;
+    left: 5%;
+  }
 }
 
 /* MOBILE BREAKPOINT */
 @media only screen and (max-width: 639px) {
+  #fortnite {
+    left: 5%;
+    top: 5%;
+    background-size: 300%;
+    /* background-position: center; */
+  }
+  #platform,
+  #devices {
+    background-size: 300%;
+    margin-top: 0px;
+  }
+  #textfortnite {
+    position: static;
+  }
+
+  h2 {
+    max-width: 98%;
+  }
+
+  .banner {
+    height: 600px;
+  }
+
+  .deviceicon {
+    margin: 10px 10px;
+  }
+
+  #nav-bar ul {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
 }
