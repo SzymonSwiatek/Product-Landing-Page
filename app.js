@@ -13,3 +13,25 @@ parent.addEventListener("click", (btn) => {
     ancestor.querySelector(".six-months").classList.toggle("price-visible");
   }
 });
+
+const sections = document.querySelectorAll("section");
+const nav = document.querySelectorAll(".nav-link");
+window.onscroll = () => {
+  let curr;
+
+  sections.forEach((section) => {
+    const topSection = section.offsetTop;
+
+    if (scrollY >= topSection - 60) {
+      curr = section.getAttribute("id");
+    }
+  });
+
+  nav.forEach((link) => {
+    link.classList.remove("nav-active");
+
+    if (link.classList.contains(curr)) {
+      link.classList.add("nav-active");
+    }
+  });
+};
