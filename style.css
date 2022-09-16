@@ -68,9 +68,6 @@ a {
   padding: 15px;
   text-decoration: none;
 }
-a:hover {
-  color: #76b900;
-}
 
 #membership {
   display: flex;
@@ -297,7 +294,7 @@ a:hover {
 
 #videoframe {
   background-image: url(src/geforce-now-video-2560-770-d@2x.jpg);
-  /* min-height: 800px; */
+  min-height: 800px;
 }
 
 #videoframe span {
@@ -343,6 +340,7 @@ a:hover {
   padding: 2px 1px;
   background: #555555;
   border-color: #555555;
+  /* z-index: 2; */
 }
 
 .switch button:hover {
@@ -371,7 +369,6 @@ a:hover {
   color: #76b900;
 }
 .nav-active {
-  /* background-color: #76b900; */
   color: #76b900;
 }
 
@@ -385,6 +382,7 @@ a:hover {
 
 .price-visible {
   display: block;
+  height: 145px;
 }
 
 .one-month h3 {
@@ -408,6 +406,12 @@ a:hover {
 li::marker {
   font-size: 40px;
 }
+/* remove/ignore :hover css style on touch devices */
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    color: #76b900;
+  }
+}
 
 /* DESKTOP BREAKPOINT */
 @media only screen and (min-width: 1350px) {
@@ -418,7 +422,7 @@ li::marker {
 }
 
 /* TABLET BREAKPOINT */
-@media only screen and (min-width: 640px) and (max-width: 1023px) {
+@media only screen and (min-width: 660px) and (max-width: 1023px) {
   #textfortnite {
     top: 30%;
     left: 5%;
@@ -433,7 +437,7 @@ li::marker {
 }
 
 /* MOBILE BREAKPOINT */
-@media only screen and (max-width: 639px) {
+@media only screen and (max-width: 659px) {
   #fortnite {
     background-size: 200%;
   }
@@ -457,19 +461,9 @@ li::marker {
     height: auto;
   }
 
-  /* .option {
-    min-height: 667px;
-  } */
-
   .deviceicon {
     margin: 10px 10px;
   }
-
-  /* #header {
-    position: static;
-    display: block;
-    
-  } */
 
   .option {
     width: 95%;
@@ -504,8 +498,8 @@ li::marker {
 
     cursor: pointer;
 
-    opacity: 0; /* hide this */
-    z-index: 2; /* and place it over the hamburger */
+    opacity: 0;
+    z-index: 2;
 
     -webkit-touch-callout: none;
   }
@@ -536,40 +530,24 @@ li::marker {
     transform-origin: 0% 100%;
   }
 
-  /* 
-   * Transform all the slices of hamburger
-   * into a crossmark.
-   */
   #menuToggle input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: #76b900;
   }
 
-  /*
-   * But let's hide the middle one.
-   */
   #menuToggle input:checked ~ span:nth-last-child(3) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
   }
 
-  /*
-   * Ohyeah and the last one should go the other direction
-   */
   #menuToggle input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
   }
 
-  /*
-   * Make this absolute positioned
-   * at the top left of the screen
-   */
   #menu {
     position: relative;
-    /* right: 5px; */
     width: 100%;
-    /* margin: -100px 0 0 -50px; */
     background: #000;
     padding: 0 10px;
 
@@ -580,9 +558,11 @@ li::marker {
     /* to stop flickering of text in safari */
 
     transform-origin: 0% 0%;
-    transform: translate(-200%, 0);
+    transform: translate(-300%, 0);
 
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+    /* display: none; */
   }
 
   #menu li {
@@ -590,13 +570,12 @@ li::marker {
     font-size: 22px;
   }
 
-  /* #menu a {
-    color: white;
-  } */
-  /*
-   * And let's slide it in from the left
-   */
-  #menuToggle input:checked ~ ul {
+  #menuToggle input:checked ~ #menu {
     transform: none;
+
+    /* display: block; */
+  }
+  #menuToggle input:checked ~ #menuToggle {
+    z-index: 1;
   }
 }
