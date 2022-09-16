@@ -560,9 +560,10 @@ li::marker {
     transform-origin: 0% 0%;
     transform: translate(-300%, 0);
 
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 
-    /* display: none; */
+    height: 0;
+    overflow: hidden;
   }
 
   #menu li {
@@ -572,10 +573,6 @@ li::marker {
 
   #menuToggle input:checked ~ #menu {
     transform: none;
-
-    /* display: block; */
-  }
-  #menuToggle input:checked ~ #menuToggle {
-    z-index: 1;
+    height: 100%;
   }
 }
